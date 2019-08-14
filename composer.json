@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/OneAll_SingleSignOn",
+    "type": "magento-module",
+    "license": "GNU/GPL-2-or-later",
+    "homepage": "",
+    "description": "Single Sign-On automatically signs users in as they browse between multiple and independent Magento shops in your network.",
+    "authors": [
+    {
+        "name": "OneAll",
+        "email": "support@oneall.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

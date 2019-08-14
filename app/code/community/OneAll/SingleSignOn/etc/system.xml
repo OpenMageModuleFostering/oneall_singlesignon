@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<tabs>
+		<oneall translate="label">
+			<label>OneAll</label>
+			<sort_order>200</sort_order>
+		</oneall>
+	</tabs>
+	<sections>	
+		<oneall_singlesignon>
+			<label>OneAll Single Sign-On</label>
+			<tab>oneall</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>260</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<documentation translate="label">
+					<label>Requirements</label>
+					<comment><![CDATA[Please note a OneAll site with a <a href="http://www.oneall.com/pricing-and-plans/#business-plans" target="_blank">Silver Plan</a> is required in order to use this extension. You only need one plan to enable SSO on all of your Magento shops.]]></comment>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<expanded>1</expanded>
+				</documentation>
+				<connection translate="label">
+					<label>API Connection Handler</label>
+					<comment><![CDATA[<p><strong>For security reasons we recommend using PHP CURL and HTTPS on port 443.</strong></p>]]></comment>
+					<frontend_type>Radios</frontend_type>
+					<frontend_model>oneall_singlesignon/adminhtml_system_config_fieldset_general</frontend_model>
+					<sort_order>2</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<expanded>1</expanded>
+					<fields>
+						<handler>
+							<label>Connection Handler</label>
+							<frontend_type>select</frontend_type>
+							<source_model>oneall_singlesignon/apiconnectionhandler
+							</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</handler>
+						<port>
+							<label>Connection Port</label>
+							<frontend_type>select</frontend_type>
+							<source_model>oneall_singlesignon/apiconnectionport</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</port>						
+						<autodetect>						
+							<frontend_type>Button</frontend_type>
+							<comment>
+								<model>oneall_singlesignon/apiautodetect</model>
+							</comment>
+							<source_model>oneall_singlesignon/apiautodetect</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</autodetect>
+					</fields>
+				</connection>
+				<general translate="label">
+					<label>API Settings</label>
+					<comment><![CDATA[<p><strong>You can create and view your API Credentials in your <a href="https://app.oneall.com/signin/" target="_blank">OneAll account</a>.</strong></p><p><strong>Please make sure to use the same settings in all the shops that you want to link together using SSO.</strong></p>]]></comment>
+					<frontend_type>text</frontend_type>
+					<frontend_model>oneall_singlesignon/adminhtml_system_config_fieldset_general</frontend_model>
+					<sort_order>3</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<expanded>1</expanded>
+					<fields>
+						<subdomain>
+							<label>API Subdomain</label>
+							<frontend_type>text</frontend_type>
+							<backend_model>oneall_singlesignon/subdomain</backend_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</subdomain>
+						<key>
+							<label>API Public Key</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</key>
+						<secret>
+							<label>API Private Key</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</secret>
+						<verify>
+							<label></label>
+							<frontend_type>Button</frontend_type>
+							<comment>
+								<model>oneall_singlesignon/apiverify</model>
+							</comment>
+							<source_model>oneall_singlesignon/apiverify</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</verify>
+					</fields>
+				</general>	
+				<accounts_create translate="label">
+					<label>Automatic Account Creation</label>
+					<comment><![CDATA[<p><strong>Automatically creates new customer accounts for SSO users that do not have an account in this shop yet and logs the users in with these accounts.</p></strong>]]></comment>
+					<frontend_type>text</frontend_type>
+					<frontend_model>oneall_singlesignon/adminhtml_system_config_fieldset_general</frontend_model>
+					<sort_order>5</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<expanded>1</expanded>
+					<fields>					
+						<automatic>
+							<label>Automatically create accounts?</label>
+							<frontend_type>select</frontend_type>
+							<source_model>oneall_singlesignon/autocreateaccounts</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</automatic>		
+						<sendmail>
+							<label>Send email to new customers?</label>
+							<frontend_type>select</frontend_type>
+							<source_model>oneall_singlesignon/autocreatesendmail</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sendmail>
+					</fields>
+				</accounts_create>		
+				<accounts_link translate="label">
+					<label>Automatic Account Link</label>
+					<comment><![CDATA[<p><strong>Tries to automatically link SSO users to already existing customer accounts. To link accounts the email address of the SSO session is matched against the email addresses of the existing customers.</strong></p><p><strong>If the extension finds an existing account but cannot link the SSO user to it (eg. if the option is disabled), a notice reminding the user of his existing account will be displayed on the login/registration page instead.</strong></p>]]></comment>
+					<frontend_type>text</frontend_type>
+					<frontend_model>oneall_singlesignon/adminhtml_system_config_fieldset_general</frontend_model>
+					<sort_order>5</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<expanded>1</expanded>
+					<fields>					
+						<automatic>
+							<label>Automatically link accounts?</label>
+							<frontend_type>select</frontend_type>
+							<source_model>oneall_singlesignon/autolinkaccounts</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</automatic>		
+						<unverified>
+							<label>Link using unverified emails?</label>
+							<comment><![CDATA[<strong>Attention!</strong> For security reasons, we advise against using unverified email addresses to link accounts.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>oneall_singlesignon/autolinkunverified</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</unverified>
+					</fields>
+				</accounts_link>		
+				<settings translate="label">
+					<label>SSO Session Settings</label>
+					<frontend_type>text</frontend_type>
+					<frontend_model>oneall_singlesignon/adminhtml_system_config_fieldset_general</frontend_model>
+					<sort_order>6</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<expanded>1</expanded>
+					<fields>					
+						<sessionlifetime>
+							<label>SSO Session Lifetime</label>
+							<comment>Sessions are automatically queued for deletion once their lifetime has expired.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>oneall_singlesignon/sessionlifetime</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sessionlifetime>						
+						<sessiontoprealm>
+							<label>SSO Session Top Realm</label>
+							<comment>Optional - The primary realm of the SSO sessions generated for customers of this Magento shop.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sessiontoprealm>						
+						<sessionsubrealm>
+							<backend_model>oneall_singlesignon/sessionsubrealm</backend_model>
+							<label>SSO Session Sub Realm</label>
+							<comment>Optional - The secondary realm of the SSO sessions generated for customers of this Magento shop.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sessionsubrealm>	
+					</fields>
+				</settings>								
+			</groups>
+		</oneall_singlesignon>
+	</sections>
+</config>

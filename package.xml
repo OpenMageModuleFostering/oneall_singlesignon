@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+    <name>OneAll_SingleSignOn</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GNU/GPL 2 or later</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Single Sign-On automatically signs users in as they browse between multiple and independent Magento shops in your network.</summary>
+    <description>Single Sign On for Magento is a professional extension that automatically signs users in as they browse between multiple and independent Magento shops in your network. &#xD;
+&#xD;
+Take away the need for your users to re-enter their authentication credentials when they switch from one of your shops to another. &#xD;
+&#xD;
+100% compliant with all European and U.S. data protection laws.</description>
+    <notes>First Release</notes>
+    <authors><author><name>OneAll</name><user>OneAll</user><email>support@oneall.com</email></author></authors>
+    <date>2017-02-28</date>
+    <time>08:47:07</time>
+    <contents><target name="magecommunity"><dir name="OneAll"><dir name="SingleSignOn"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Fieldset"><file name="General.php" hash="c0ab442fad34120c4f447e957498f520"/></dir></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="c932884755691f417cc42f78880fec36"/></dir><dir name="Model"><file name="Apiautodetect.php" hash="77309fb314cf82fa4c6524244494e9be"/><file name="Apiconnectionhandler.php" hash="b696454def7320d66938e887bea468a1"/><file name="Apiconnectionport.php" hash="fa1fe1f691b69180dfedc624bd16af75"/><file name="Apiverify.php" hash="62000fb9d727cdbfd1bc6c3037dc94c8"/><file name="Autocreateaccounts.php" hash="0aad711237ef95d85fcd5d17d60e3b91"/><file name="Autocreatesendmail.php" hash="eefa63f837e7c707689746ec0119fcbb"/><file name="Autolinkaccounts.php" hash="762758fb233062704ae4844639d2e02c"/><file name="Autolinkunverified.php" hash="3e1c290dc39905cd79136a1244e4604c"/><file name="Observer.php" hash="a82ae4be803983fbb90538866cf5fe61"/><dir name="Resource"><dir name="Session"><file name="Collection.php" hash="1ddb59ee1f6677b380fad4224cafbf85"/></dir><file name="Session.php" hash="8bca89bf0b0cd5f71134c9bb66e40cda"/><dir name="User"><file name="Collection.php" hash="1898d23e804507c371abf458fbdd0954"/></dir><file name="User.php" hash="25915ca37a5bc4682af2a0ddef1deb9f"/></dir><file name="Session.php" hash="336fb93596fa553f7163f2b4c04be48d"/><file name="Sessionlifetime.php" hash="ec23a29cf067b92a952bf40a492fc1ca"/><file name="Sessionsubrealm.php" hash="948d60beaad0ce5332ea3ee477a8ce34"/><file name="Subdomain.php" hash="b4850aa3c34c745d67846f9b0e80863e"/><file name="User.php" hash="19381f561be295b4f5edc9e8d1efce53"/></dir><dir name="controllers"><file name="AjaxController.php" hash="ba491693992ed85cafb3a40ace26c44b"/></dir><dir name="etc"><file name="adminhtml.xml" hash="900b56f9a5d8f38df05f283c6f5d7ff8"/><file name="config.xml" hash="be86c658c30c2871f36f8cc0f4d9216d"/><file name="system.xml" hash="c53735a7be92ad515fec4c2bec272d85"/></dir><dir name="sql"><dir name="oneall_singlesignon_setup"><file name="mysql4-install-1.0.0.php" hash="3d3bc48e2efd8db3c4c4e3d749d5c26f"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="oneall-singlesignon.xml" hash="92eb1a2e374a73402990043c7bdb10b3"/></dir><dir name="template"><dir name="oneall"><dir name="singlesignon"><file name="loggedin.phtml" hash="b36c1ea49ea31faf84d340a76d6eb002"/><file name="loggedout.phtml" hash="ab557c6047def6175e0d7c9a8cabcb55"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="OneAll_SingleSignOn.xml" hash="910eea2b985109eb361dfb448a92fb48"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>7.0.0</max></php></required></dependencies>
+</package>
