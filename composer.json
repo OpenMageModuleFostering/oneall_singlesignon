@@ -1,5 +1,5 @@
 {
-    "name": "OpenMageModuleFostering\/OneAll_SingleSignOn",
+    "name": "openmage-module-fostering\/oneall_singlesignon",
     "type": "magento-module",
     "license": "GNU\/GPL-2-or-later",
     "homepage": "",
